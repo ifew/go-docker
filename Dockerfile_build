@@ -1,7 +1,7 @@
 FROM golang:1.9.2
 WORKDIR /api/src
 ENV DBHOST=mongo
-ENV CGO_ENABLED=0
-ENV GOOS=darwin
+RUN export CGO_ENABLED=0
+RUN export GOOS=darwin
 ENTRYPOINT ["go"]
 CMD ["run"]
