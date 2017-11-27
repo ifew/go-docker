@@ -8,11 +8,11 @@ test-dev:
 	docker container run -it -p 5001:8080 --rm -v $(PWD):/api/src -t go_api test
 
 image:
-	docker image build -f Dockerfile -t api .
+	docker image build -f Dockerfile -t hellogirl_api .
 start:
-	docker container run -d -p 5001:8080 --name api01 -t api
+	docker container run -d -p 5001:8080 --name hellogirl_api01 -t hellogirl_api
 stop:
-	docker container rm -f api01
+	docker container rm -f hellogirl_api01
 
 clean:
 	go clean
